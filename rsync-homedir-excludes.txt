@@ -57,8 +57,8 @@
 #.local/share/lutris/runners/wine/
 #
 ## Spotify
-#.config/spotify/Users
-#.var/app/com.spotify.Client/config/spotify/Users
+.config/spotify/Users
+.var/app/com.spotify.Client/config/spotify/Users
 #
 ## those folders contain only temporary Videos I want to watch
 #/Videos
