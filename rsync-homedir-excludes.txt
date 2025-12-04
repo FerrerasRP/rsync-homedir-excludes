@@ -377,6 +377,7 @@ nohup.out
 .config/Code - OSS/logs/
 .config/Code/logs/
 .config/Code/CachedData/*
+.config/Code/User/History/*
 
 # VS Codium
 .config/VSCodium/CachedExtensionVSIXs
