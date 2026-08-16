@@ -1,12 +1,19 @@
 # rsync-homedir-excludes
 This project maintains a list of directories and files you probably do not need to back up, which you can pass to the `rsync` command's `--exclude-from` option.
 
+## Changelog
+
+    NEW EXCLUSIONS: Python Projects & Frameworks
+    NEW EXCLUSIONS: Node.js, Frontend & Build Artifacts (node_modules/, target/, .next/)
+    NEW EXCLUSIONS: AI, Data Science & Heavy Commercial Packages
+
+    
 ## Usage:
 
     # download to `rsync-homedir-local.txt`
-    wget https://raw.githubusercontent.com/rubo77/rsync-homedir-excludes/master/rsync-homedir-excludes.txt -O rsync-homedir-local.txt
+    wget https://raw.githubusercontent.com/FerrerasRP/rsync-homedir-excludes/master/rsync-homedir-excludes.txt -O rsync-homedir-local.txt
     # or clone and copy to `rsync-homedir-local.txt`
-    git clone https://github.com/rubo77/rsync-homedir-excludes
+    git clone https://github.com/FerrerasRP/rsync-homedir-excludes
     cd rsync-homedir-excludes
     cp rsync-homedir-excludes.txt rsync-homedir-local.txt
 

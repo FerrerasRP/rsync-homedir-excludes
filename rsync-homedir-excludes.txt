@@ -5,6 +5,9 @@
 # Author: Ruben Barkow-Kuder <https://github.com/rubo77/rsync-homedir-excludes>
 # Version: 2019-11-30
 #
+# Reviewer: Ricardo Pompeu <https://github.com/FerrerasRP/rsync-homedir-excludes>
+# Version: 2026-08-16
+#
 # #Usage:
 #    USER=<homedir username here>
 #    rsync -aP --exclude-from=rsync-homedir-excludes.txt /home/$USER/ /media/$USER/linuxbackup/home/$USER/
@@ -56,10 +59,12 @@
 #.PlayOnLinux
 #.local/share/lutris/runners/wine/
 #
+
 ## Spotify
 .config/spotify/Users
 .var/app/com.spotify.Client/config/spotify/Users
-#
+
+
 ## those folders contain only temporary Videos I want to watch
 #/Videos
 #/Movies
@@ -69,7 +74,7 @@
 #.bash_history
 #.zsh_history
 #.mysql_history
-#
+
 ## Python eggs
 .local/lib/python*
 #
@@ -299,7 +304,6 @@ Thumbs.db
 .googleearth/Cache
 
 #Google Chrome:
-
 .config/google-chrome/ShaderCache
 .config/google-chrome/*/Local Storage
 .config/google-chrome/*/Session Storage
@@ -309,7 +313,6 @@ Thumbs.db
 .config/google-chrome/*/WebStorage/*/CacheStorage
 
 #Chromium:
-
 .config/chromium/*/Local Storage
 .config/chromium/*/Session Storage
 .config/chromium/*/Service Worker/CacheStorage
@@ -386,9 +389,13 @@ nohup.out
 .config/VirtualBox/VBoxSVC.log*
 .config/VirtualBox/VBoxGuestAdditions_*
 
-# Rust artefacts
-.cargo
-.rustup
+# Rust artefacts & caches
+.cargo/registry/
+.cargo/git/
+.cargo/cache/
+.rustup/downloads/
+.rustup/tmp/
+
 
 # Erlang artefacts
 .kerl
@@ -433,3 +440,124 @@ go/pkg/mod/cache
 
 # SC-Controller - socket file
 .config/scc/daemon.socket
+
+################################################
+# Python Projects & Frameworks                 #
+################################################
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging / builds
+# (NOTE: Do NOT exclude unanchored 'lib/' or 'var/' as it skips source code in Flutter, Ruby, Elixir, Node, etc.)
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+sdist/
+wheels/
+share/wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook & JupyterLab
+.ipynb_checkpoints
+
+# Python testing and coverage frameworks
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.coredump
+
+# Environment management (venvs)
+.env/
+env/
+venv/
+ENV/
+.venv/
+
+# Pipenv & Poetry & Celery
+.pypoetry/
+.pipenv/
+celerybeat-schedule
+celerybeat.pid
+
+# Tooling, Linters and Type Checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+.pydocstyle/
+
+################################################
+# Node.js, Frontend & General Build Artifacts   #
+################################################
+
+# Node.js dependencies and package manager caches
+node_modules/
+.pnpm-store/
+.yarn/cache/
+.yarn/unplugged/
+.bun/cache/
+
+# Frontend framework build output and caches
+.next/
+.nuxt/
+.svelte-kit/
+.astro/
+.gatsby/
+.parcel-cache/
+
+# Compiled target directories (Rust, Java Maven, Cargo, Zig, etc.)
+target/
+zig-cache/
+zig-out/
+
+################################################
+# AI, Data Science & Heavy Commercial Packages #
+################################################
+
+# Hugging Face models and datasets cache
+.cache/huggingface/
+
+# PyTorch, TorchVision and Text audio caches
+.cache/torch/
+
+# OpenAI / Triton compiler caches
+.cache/triton/
+
+# Anaconda / Miniconda environment caches
+.conda/
+miniconda*/
+anaconda*/
+
+# DVC (Data Version Control) caches and internals
+.dvc/cache/
+.dvc/tmp/
+
+# JetBrains (PyCharm Pro / IntelliJ) runtime caches
+.idea/
+
+# Wandb (Weights & Biases) ML experiment logs
+wandb/
+
+# Streamlit cache (keeping config/secrets.toml backed up)
+.streamlit/cache/
